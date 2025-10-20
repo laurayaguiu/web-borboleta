@@ -8,7 +8,9 @@ body {
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.6;
     color: #374151;
+    background-color: #fff;
 }
+
 
 .container {
     max-width: 1200px;
@@ -16,7 +18,7 @@ body {
     padding: 0 1rem;
 }
 
-/* Navigation */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -48,42 +50,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #fff;
     font-weight: bold;
     font-size: 1.125rem;
+    text-decoration: none;
 }
+
 
 .desktop-nav {
     display: none;
     gap: 2rem;
+    list-style: none;
 }
 
 .nav-link {
     color: #374151;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .nav-link:hover {
     color: #ec4899;
-}
-
-.mobile-menu-btn {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-.hamburger {
-    width: 20px;
-    height: 2px;
-    background: #374151;
-    transition: all 0.3s ease;
+    padding: 0 5px;
 }
 
 .mobile-nav {
@@ -101,12 +90,28 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    list-style: none;
 }
 
-/* Hero Section */
+
+.dark-mode-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.dark-mode-btn:hover {
+    transform: scale(1.2);
+}
+
+
 .hero-section {
     min-height: 100vh;
     background-image: url("fundo.png");
+    background-size: cover;
+    background-position: center;
     position: relative;
     overflow: hidden;
 }
@@ -116,7 +121,7 @@ body {
     margin: 0 auto;
     padding: 6rem 1rem 4rem;
     position: relative;
-    z-index: 10;    
+    z-index: 10;
 }
 
 .signup-btn-container {
@@ -126,7 +131,7 @@ body {
 
 .signup-btn {
     background: #14b8a6;
-    color: white;
+    color: #fff;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 9999px;
@@ -141,43 +146,36 @@ body {
 
 .hero-header {
     text-align: center;
-    margin-bottom: 4rem; 
+    margin-bottom: 4rem;
 }
 
 .hero-title {
     font-size: 4rem;
     font-weight: bold;
-    color:beige;
+    color: beige;
     margin-bottom: 1rem;
     letter-spacing: 0.1em;
 }
 
 .hero-subtitle {
     font-size: 2rem;
-    color:aliceblue;
+    color: aliceblue;
     font-style: italic;
     font-weight: 300;
 }
 
 
-/* Sobre Nós Section */
 .sobre-nos-section {
     padding: 5rem 0;
     background: linear-gradient(135deg, #fdf2f8, #fce7f3);
 }
 
-.sobre-nos-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.sobre-nos-header h2 {
+.section-header h2 {
     font-size: 4rem;
     font-weight: bold;
     color: #1f2937;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .sobre-nos-content {
@@ -190,6 +188,7 @@ body {
     font-size: 1.125rem;
     color: #374151;
     line-height: 1.7;
+    text-align: justify;
 }
 
 .quote {
@@ -202,29 +201,17 @@ body {
     font-style: italic;
 }
 
-/* Menu Section */
+
 .menu-section {
     padding: 5rem 0;
     background: linear-gradient(135deg, #fffbeb, #fef3c7);
-}
-
-.menu-header {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.menu-header h2 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #1f2937;
 }
 
 .menu-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 3rem;
 }
 
 .menu-item {
@@ -242,13 +229,13 @@ body {
     border-radius: 1rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .menu-delights .menu-image {
@@ -258,6 +245,7 @@ body {
 .menu-savory .menu-image {
     background-image: url("salgado.png");
 }
+
 .menu-cakes .menu-image {
     background-image: url("bolos.jpg");
 }
@@ -271,11 +259,10 @@ body {
 
 .menu-content {
     text-align: center;
-    color: white;
+    color: #fff;
     position: relative;
     z-index: 10;
 }
-
 
 .menu-content h3 {
     font-size: 1.7rem;
@@ -294,7 +281,7 @@ body {
     margin: 0 auto;
 }
 
-/* Novidades Section */
+
 .novidades-section {
     padding: 5rem 0;
     background: linear-gradient(135deg, #fffbeb, #fef7cd);
@@ -306,25 +293,14 @@ body {
     inset: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-   
 }
 
 .novidades-image {
-    position: relative;
-    overflow: hidden;
     background-image: url("rocambole.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
-.novidades-image::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    
-}
-
 
 .novidades-grid {
     display: grid;
@@ -371,10 +347,6 @@ body {
     border-left: 4px solid #eab308;
 }
 
-.news-workshop {
-    border-left: 4px solid #f472b6;
-}
-
 .news-custom {
     border-left: 4px solid #f97316;
 }
@@ -390,21 +362,10 @@ body {
     font-size: 0.875rem;
 }
 
-/* Contatos Section */
+
 .contatos-section {
     padding: 5rem 0;
     background: linear-gradient(135deg, #fce7f3, #fdf2f8);
-}
-
-.contatos-header {
-    text-align: left;
-    margin-bottom: 4rem;
-}
-
-.contatos-header h2 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #1f2937;
 }
 
 .contatos-grid {
@@ -461,7 +422,7 @@ body {
     color: #ec4899;
 }
 
-/* Footer Section */
+
 .footer-content {
     text-align: center;
     margin-top: 3rem;
@@ -473,107 +434,12 @@ body {
 }
 
 
-/* Design Responsivo */
-@media (min-width: 768px) {
-    .desktop-nav {
-        display: flex;
-    }
-    
-    .mobile-menu-btn {
-        display: none;
-    }
-    
-    .hero-title {
-        font-size: 6rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 2.5rem;
-    }
-    
-    .pastry-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .sobre-nos-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .sobre-nos-header h2 {
-        font-size: 5rem;
-    }
-    
-    .menu-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .menu-header h2 {
-        font-size: 5rem;
-    }
-    
-    .contatos-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .contatos-header h2 {
-        font-size: 5rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .hero-title {
-        font-size: 8rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 3rem;
-    }
-    
-    .sobre-nos-header h2 {
-        font-size: 6rem;
-    }
-    
-    .menu-header h2 {
-        font-size: 6rem;
-    }
-    
-    .contatos-header h2 {
-        font-size: 6rem;
-    }
-    .nav-link a:hover{
-        padding:5px;
-    }
-}
-
-.nav-link{
-    transition:0.5s;
-}
-.nav-link:hover{
-    padding:0px 5px;
-    
-
-}
-
-/*DARK MODE */
-
-#dark-mode-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-#dark-mode-toggle:hover {
-    transform: scale(1.2);
-}
-
 body.dark-mode {
     background: #141414;
     color: #f5f5f5;
 }
 
-/* navbar */
+
 body.dark-mode .navbar {
     background: rgba(0, 0, 0, 0.9);
     border-bottom: 1px solid #333;
@@ -587,7 +453,7 @@ body.dark-mode .nav-link:hover {
     color: #f472b6;
 }
 
-/* seções claras precisam inverter */
+
 body.dark-mode .sobre-nos-section,
 body.dark-mode .menu-section,
 body.dark-mode .novidades-section,
@@ -596,22 +462,60 @@ body.dark-mode .contatos-section {
     color: #f5f5f5;
 }
 
-/* títulos */
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3 {
     color: #fff;
 }
 
-/* parágrafos */
 body.dark-mode p {
     color: #ddd;
 }
 
-/* cards e caixas */
 body.dark-mode .contact-item,
 body.dark-mode .novidades-content {
     background: rgba(40, 40, 40, 0.95);
     color: #f5f5f5;
     border: 1px solid #333;
+}
+
+
+@media (min-width: 768px) {
+    .desktop-nav {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 2.5rem;
+    }
+
+    .sobre-nos-section .section-header h2 {
+        font-size: 5rem;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contatos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 6rem;
+    }
 }

@@ -212,3 +212,20 @@ export default function Home() {
     </body>
   );
 }
+import Formulario from "./components/Formulario";
+
+export default function Home() {
+  return (
+    <main>
+      {/* seu conteúdo existente */}
+      <section id="home" className="hero-section">
+        <a href="#formulario" className="signup-btn">Cadastre-se!</a>
+      </section>
+
+      {/* seção com o formulário */}
+      <section id="formulario" className="form-section">
+        <Formulario />
+      </section>
+    </main>
+  );
+}

@@ -40,7 +40,8 @@ export default function Home() {
             <section id="home" className="hero-section">
                 <section className="hero-container">
                     <aside className="signup-btn-container">
-                        <a href="formulario.html" className="signup-btn">Cadastra-se!</a>
+                        import Link from "next/link";
+
                     </aside>
 
                     <header className="hero-header">
